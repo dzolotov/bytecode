@@ -152,6 +152,7 @@ class OperationBuilder {
                 if (varIndex < 0) {
                     throw new IllegalAccessException("Variable " + operand + " isn't defined");
                 }
+                System.out.println("Push variable "+operand);
                 visitor.visitVarInsn(ILOAD, varIndex + 1);
             }
             //применяем операцию над стеком (если необходимо)
